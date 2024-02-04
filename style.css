@@ -1,0 +1,95 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Code Pro', monospace;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+@keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+
+.start {
+    position: absolute;
+    top: 8px;
+    left: 58%;
+    z-index: 1;
+    font-size: 16px;
+    color: rgb(194, 202, 209);
+    animation: fadeOut 10s forwards;
+}
+
+.help-img {
+    position: relative;
+    top: 5px;
+    left: 95%;
+    right: 0px;
+    width: 60px;
+    /* Adjust the width and height based on your image size */
+    height: 60px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.help-img img {
+    width: 60px;
+    height: 60px;
+    transition: opacity 0.3s ease;
+    /* Add a smooth transition effect */
+    opacity: 0.5;
+}
+
+.help-img:hover img {
+    opacity: 1;
+}
+
+.help-img:hover+.help-box {
+    opacity: 1;
+}
+
+.help-box {
+    background-color: rgb(173, 174, 176);
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    z-index: 1;
+    text-align: left;
+    margin: 10px;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.help-box h1 {
+    font-size: 16px;
+    font-style: Semi-bold;
+    margin: 8px 10px;
+}
+
+.help-box p {
+    font-size: 12px;
+    margin: 5px 10px;
+    /* margin-bottom: 3px; */
+}
+
+.help-box #bottom-line {
+    margin-bottom: 10px;
+}
+
